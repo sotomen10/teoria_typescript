@@ -34,3 +34,4 @@ En TypeScript, se puede asegurar el tipo de datos en un array especificando el t
 
 ```typescript
 let names: string[] = ['Alice', 'Bob', 'Charlie'];
+```

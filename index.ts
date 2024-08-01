@@ -8,7 +8,7 @@ type Producto = {
 //Se crea una instancia del tipo Producto
 let producto: Producto = {
     id: 1,
-    nombre: "Arroz",
+    nombre: "frijol",
     precio: 20000
 };
 
@@ -56,7 +56,7 @@ function clasificarNumero(number: number) {
 
 //4. Estructuras de iteración (while, for, foreach, map)
 
-let names: string[] = ['luis', 'carlos', 'felipe', 'alejandro', 'oscar'];
+let names: string[] = ['alexis', 'juliana', 'felipe', 'adela', 'pilar'];
 
 function getNames(names: string[]) {
     for (let i = 0; i < names.length; i++) {
@@ -75,7 +75,7 @@ function getNames(names: string[]) {
 
 let numeros: number[] = [1, 2, 3, 4, 5];
 
-let total = numeros.reduce((acumulador, elemento) => {
+let total :number = numeros.reduce((acumulador, elemento) => {
     return acumulador + elemento
 });
 
@@ -83,7 +83,7 @@ let total = numeros.reduce((acumulador, elemento) => {
 
 //Tarea 2: Implementa una función que reciba un array de strings y retorne la concatenación de todos los elementos.
 
-let nombres: string[] = ['luis', 'carlos', 'felipe', 'alejandro', 'oscar'];
+let nombres: string[] = ['alexis', 'juliana', 'felipe', 'adela', 'pilar'];
 
 function concatArray(array: string[]) {
     return array.join('');
@@ -98,26 +98,26 @@ type User = {
     name: string;
 };
 
-const users: User [] = [
+const users: User[] = [
     {
         id: 1,
-        name: 'Luis'
+        name: 'alexis'
     },
     {
         id: 1,
-        name: 'carlos'
+        name: 'juliana'
     },
     {
         id: 1,
-        name: 'alejandro'
+        name: 'felipe'
     },
     {
         id: 1,
-        name: 'andres'
+        name: 'pilar'
     },
     {
         id: 1,
-        name: 'julian'
+        name: 'adela'
     }
 ];
 
@@ -127,22 +127,22 @@ users.forEach(user => {
 
 //Tarea 4: Implementa una función que reciba un array de números y retorne el mayor valor.
 
-let arrayNumber: number [] = [5, 3, 6, 4, 5, 1, 12, 6];
+let arrayNumber: number[] = [6, 3, 8, 4, 5, 1, 10, 2];
 
-function returnNumber(numbers: number []): number {
+function returnNumber(numbers: number[]): number {
     return Math.max(...numbers);
 };
 
 //console.log(returnNumber(arrayNumber));
 
 function findMaxValue(numbers: number[]): number {
-    if(numbers.length === 0) {
+    if (numbers.length === 0) {
         console.error("Array esta vacio");
     }
 
     let maxValue = numbers[0];
     for (let i = 0; i < numbers.length; i++) {
-        if(numbers[i] > maxValue) {
+        if (numbers[i] > maxValue) {
             maxValue = numbers[i];
         }
     }
@@ -162,8 +162,8 @@ interface Car {
 }
 
 let car: Car = {
-    marca: 'Toyota',
-    modelo: 'Landcruiser',
+    marca: 'toyota',
+    modelo: 'txl',
     year: 2018
 };
 
@@ -172,7 +172,7 @@ let car: Car = {
 //Tarea 2: Con base en el objeto Car, crea una clase que posea un metodo estatico que reciba un objeto Car y retorne un string con la información del carro.
 
 class CarInfo {
-    static getInfo (car: Car): string {
+    static getInfo(car: Car): string {
         return `Marca: ${car.marca}, Modelo: ${car.modelo}, year: ${car.year}`
     };
 };
@@ -182,17 +182,17 @@ class CarInfo {
 
 //Tarea 3: Implementa una función que reciba un objeto Car y retorne un nuevo objeto con las mismas propiedades, pero con el año incrementado en 1.
 
-function info (car: Car) {
-    car.year ++
+function info(car: Car) {
+    car.year++
     return car
 };
 
 //console.log(info(car));
 
-function info2 (car: Car) {
+function info2(car: Car) {
     return {
         ...car,
-        year: car.year ++
+        year: car.year++
     };
 }
 
@@ -202,7 +202,7 @@ function info2 (car: Car) {
 
 // Tarea1: Implementa una función que reciba un array de números y retorne el mayor valor.
 
-let arrayNumber2: number [] = [5, 3, 6, 4, 5, 1, 12, 6];
+let arrayNumber2: number[] = [4, 3, 6, 4, 5, 2, 10, 8];
 function firstFunction(array: number[]): number {
     let maxValue = array[0]
     array.forEach(number => {
@@ -214,11 +214,11 @@ function firstFunction(array: number[]): number {
 //console.log(findMaxValue(arrayNumber2));
 
 
-//Tarea 2: Implementa una funcion que reciba tres parametros y retorne error si almenos uno de los parametros pasados no es del tipo de los dos primeros parametros. 
+//Tarea 2: Implementa una funcion que reciba rest parameters y retorne error si almenos uno de los parametros pasados no es del tipo de los dos primeros parametros. 
 //Asegurarse que los dos primeros parametros sean del mismo tipo.
 
-function validate (para1: string, para2: string, para3: any): string {
+function validate(para1: string, para2: string, para3: any): string {
     return typeof para1 && typeof para2 !== typeof para3 ? `Para3: ${typeof para3}, no es del mismo tipo de para1 y para2` : `Para3: ${typeof para3}, es del mismo tipo de para1 y para2`;
 };
 
-console.log(validate("hola", "luis", "1"));
+console.log(validate("hola", "Alexis", "1"));
